@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const data = fetch("https://node-api-s.herokuapp.com/people").then(res => res.json()).then(data => console.log(data));
+        console.log(data);
+    </script>
     <title>Document</title>
 </head>
 <body>

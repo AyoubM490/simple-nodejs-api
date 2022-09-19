@@ -4,8 +4,11 @@ const { people } = require("./data");
 const logger = require("./logger");
 const authorize = require("./authorize");
 const morgan = require("morgan");
+const cors = require("cors");
 
 app.use(express.urlencoded({ extended: false }));
+
+app.use(cors());
 
 app.get("/api/people", (req, res) => {
   res.status(200).json({ success: true, data: people });
