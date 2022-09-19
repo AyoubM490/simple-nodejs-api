@@ -21,7 +21,7 @@ app.post("/login", (req, res) => {
 });
 
 app.get("/people", (req, res) => {
-  res.status(200).send(people);
+  res.status(200).send({ success: true, data: people });
 });
 
 app.listen(process.env.PORT || 3000, () => {
